@@ -1,0 +1,22 @@
+document.getElementById('idName').style.color = 'red';
+document.getElementById('idName').style.fontSize = '18px';
+
+
+// Start id দিয়ে ‍attribute খুজে বের করা
+const title = document.getElementById('idName')
+title.getAttribute('id')
+title.getAttribute('class')
+title.classList
+title.classList.add('classname')
+title.classList.remove('classname')
+title.setAttribute = ('title', 'tooltip set by javascript')
+// End id দিয়ে ‍attribute খুজে বের করা
+
+// class under এ যা যা আছে সব দেখাবে(html)
+document.getElementsByClassName('query-nexus')[0].innerHTML
+
+// class under এ যা যা text আছে সব দেখাবে(text)
+document.getElementsByClassName('query-nexus')[0].innerText
+
+
+

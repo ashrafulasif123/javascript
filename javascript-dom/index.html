@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- 
+        5 built-in-method in search any element from the document
+        document.getElementsByTagName()
+        document.getElementById()
+        document.getElementsByClass()
+        document.querySelector()
+        document.querySelectorAll()
+    -->
+    <section>
+        <h1 class="versity">International Islamic University Chittagong</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae repellendus voluptate vero quasi sed harum
+            perferendis facere dignissimos molestias laudantium.</p>
+    </section>
+    <!-- getElementById -->
+    <section>
+        <ul>
+            <li id="fruit">Mango</li>
+            <li>Apple</li>
+            <li>Pinaple</li>
+            <li>Orange</li>
+            <li>Jackfruit</li>
+        </ul>
+    </section>
+    <!-- getElementsByClass -->
+    <section id="prime-container" class="large-font primary-think">
+        <h1>Prime Bank PLC</h1>
+        <ul>
+            <li class="primary">Uttora</li>
+            <li class="primary">Mirpur</li>
+            <li class="primary">Zatrabari</li>
+            <li class="primary">Dhanmondi</li>
+        </ul>
+    </section>
+    <!-- querySelectorAll()
+         querySelector()    
+    -->
+    <section>
+        <ul class="employees">
+            <li>Employee 1</li>
+            <li>Employee 2</li>
+            <li>Employee 3</li>
+            <li>Employee 4</li>
+        </ul>
+
+        <ul class="employees">
+            <li>Employee 1</li>
+            <li>Employee 2</li>
+            <li>Employee 3</li>
+            <li>Employee 4</li>
+        </ul>
+    </section>
+    <script src="js/dom.js"></script>
+    <script>
+        /* 
+           getElementsByTagName() // এখানে এই মেথড এর মাধ্যমে ডকুমেন্ট এর Tag গুলোকে(যখন যে tag প্যারামিটার এ দেয় হয়) তাদেরকে খুজে নিয়ে আনা হয়। 
+        */
+        const tagSearch = document.getElementsByTagName('h1') // HTML Collection h1 গুলোকে Array like Object আকারে tagSearch Variable এ রাখা হয়।
+        // console.log(tagSearch) // Output: HTMLCollection(2) [h1.versity, h1]
+        for (const tag of tagSearch) { // h1 element(Object) গুলোকে for loop দিয়ে নিয়ে আসা হয়
+            // console.log(tag) // h1 এর ভেতরের text কে প্রদর্শনের জন্য
+        }
+
+        /* 
+            getElementById()
+        */
+
+        const idSearch = document.getElementById('fruit')
+        // console.log(idSearch) // যেখানে id আছে শুধু সেটিকে দেখাচ্ছে
+        // console.log(idSearch.innerText)
+
+        /* 
+            getElementsByClass()
+        */
+
+        const classSearch = document.getElementsByClassName('primary') // 
+        // console.log(classSearch)
+        for (const pri of classSearch) {
+            // console.log(pri)
+            // console.log(pri.innerText)
+        }
+
+        /* 
+            querySelectorAll()
+        */
+        const queryAllSearch = document.querySelectorAll('.employees li') // সব li কে দিচ্ছে
+        // console.log(queryAllSearch)
+        // console.log(queryAllSearch.innerText) // Output: undefined
+        for (const employee of queryAllSearch) {
+            // console.log(employee)
+        }
+        /* 
+            querySelector()
+        */
+        const employeesBox = document.querySelector('.employees li'); // শুধুমাত্র একটি li কে দিচ্ছে
+        // console.log(employeesBox);
+
+
+    </script>
+</body>
+
+</html>
