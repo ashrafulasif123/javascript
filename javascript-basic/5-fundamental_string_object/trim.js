@@ -1,3 +1,13 @@
+const life = 'Quran'
+const life2 = '   Quran'
+
+if (life.trim() === life2.trim()) {
+    // console.log('Quran is our life');
+}
+else {
+    // console.log('Something is wrong')
+}
+
 const removeDuplicate = (sentence) => {
     const sentenceSplit = sentence.split(' ')
     const uniqueValue = []
@@ -10,6 +20,7 @@ const removeDuplicate = (sentence) => {
     for (const unique of uniqueValue) {
         uniqueSum = uniqueSum + unique + ' '
     }
+    // এখানে trim() ব্যবহার করা হয়েছে
     const uniqueSent = `${uniqueSum}      `
     return `${uniqueSent.trim()}<`
 }
@@ -17,4 +28,4 @@ const removeDuplicate = (sentence) => {
 
 const sentence = 'i was graduated from was international islamic university islamic chittagong in 2015 2015'
 const resultRemoveDuplicate = removeDuplicate(sentence)
-console.log(resultRemoveDuplicate)
+// console.log(resultRemoveDuplicate)
