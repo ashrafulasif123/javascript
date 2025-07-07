@@ -29,3 +29,8 @@ const removeDuplicate = (sentence) => {
 const sentence = 'i was graduated from was international islamic university islamic chittagong in 2015 2015'
 const resultRemoveDuplicate = removeDuplicate(sentence)
 // console.log(resultRemoveDuplicate)
+
+// ভিতরের এবং আগের, পরের space remove করার জন্য
+const versity = `i was graduated   from international islamic university chittagong in 2015`
+const cleaned = versity.trim().split(/\s+/).join(' ')
+// console.log(versity)
