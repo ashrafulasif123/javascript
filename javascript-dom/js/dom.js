@@ -18,8 +18,28 @@ for (const section of sections) {
 
 const title = document.getElementById('prime-container')
 title.classList.add('text-center')
+title.classList.add('prime-bg')
 title.classList.remove('large-font')
 
-const primaryHtml = document.getElementById('prime-container').innerHTML
-console.log(primaryHtml)
+
+/**
+ * With innerHTML
+ */
+/* const primaryAll = document.getElementById('prime-container')
+console.log(primaryAll) */
+
+
+/**
+ * Without innerHTML
+ */
+
+const primaryAll = document.getElementById('prime-container')
+// console.log(primaryAll)
+// console.log(primaryAll.childNodes)
+// console.log(primaryAll.childNodes[3])
+// console.log(primaryAll.childNodes[3].childNodes)
+// console.log(primaryAll.childNodes[3].childNodes[3])
+// console.log(primaryAll.childNodes[3].childNodes[3].previousSibling.previousSibling)
+
+
 
